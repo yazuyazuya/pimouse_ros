@@ -1,11 +1,15 @@
 #!/bin/bash -xve
 
 #required packages
-pip install --upgrade pip
-pip install catkin_pkg
-pip install empy
-pip install pyyaml
-pip install rospkg
+apt install catkin_pkg
+apt install empy
+apt install pyyaml
+apt install rospkg
+
+#pip install catkin_pkg
+#pip install empy
+#pip install pyyaml
+#pip install rospkg
 
 #ros install
 cd ..
