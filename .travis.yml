@@ -11,6 +11,7 @@ before_script:
         - bash -xve ./test/travis_package_make.bash
         - source ~/catkin_ws/devel/setup.bash
         - bash -xve ./test/travis_prepare_dummy_files.bash
+        - sudo chmod 0555 ./node_modules/.bin/travis
 script:
         - cd /home/travis/.ros/
         - sudo mkdir test_results
@@ -19,8 +20,8 @@ script:
         - cd pimouse_ros
         - sudo touch rostest-launch_test.xml
         - sudo chmod 666 rostest-launch_test.xml
-          #- cd ~/catkin_ws/src/pimouse_ros/
-        - source ~/catkin_ws/devel/setup.bash
-        - cd ~/catkin_ws/
-        - catkin_make tests
-          #- rostest pimouse_ros test.launch
+        - cd ~/catkin_ws/src/pimouse_ros/
+          #- source ~/catkin_ws/devel/setup.bash
+          #- cd ~/catkin_ws/
+          #- catkin_make tests
+        - rostest pimouse_ros test.launch
