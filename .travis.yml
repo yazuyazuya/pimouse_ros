@@ -12,7 +12,4 @@ before_script:
         - source ~/catkin_ws/devel/setup.bash
         - bash -xve ./test/travis_prepare_dummy_files.bash
 script:
-        - cd /home/travis/.ros/
-        - mkdir log
-        - cd ~/catkin_ws/src/pimouse_ros/
-        - rostest pimouse_ros test.launch
+        - sudo rostest pimouse_ros test.launch
