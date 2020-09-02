@@ -12,4 +12,4 @@ before_script:
         - source ~/catkin_ws/devel/setup.bash
         - bash -xve ./test/travis_prepare_dummy_files.bash
 script:
-        - sudo rostest pimouse_ros test.launch
+        - rostest pimouse_ros test.launch
