@@ -19,5 +19,8 @@ script:
         - cd pimouse_ros
         - sudo touch rostest-launch_test.xml
         - sudo chmod 666 rostest-launch_test.xml
-        - cd ~/catkin_ws/src/pimouse_ros/
-        - rostest pimouse_ros test.launch
+          #- cd ~/catkin_ws/src/pimouse_ros/
+        - source ~/catkin_ws/devel/setup.bash
+        - cd ~/catkin_ws/
+        - catkin_make tests
+          #- rostest pimouse_ros test.launch
