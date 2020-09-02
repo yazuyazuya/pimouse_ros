@@ -3,8 +3,6 @@ import rospy, unittest, rostest
 import rosnode
 import time
 
-env ROS_LOG_DIR=/home/travis/.ros/log
-
 class BuzzerTest(unittest.TestCase):
     def test_node_exist(self):
         nodes = rosnode.get_node_names()
