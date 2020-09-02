@@ -8,6 +8,7 @@ if __name__ == '__main__':
     devfile = '/dev/rtlightsensor0'
     rospy.init_node('rtlightsensors')
     pub = rospy.Publisher('lightsensors', LightSensorValues, queue_size=1)
+
     rate = rospy.Rate(freq)
 
     while not rospy.is_shutdown():
