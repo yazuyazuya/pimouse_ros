@@ -1,6 +1,9 @@
 sudo: required
 dist: bionic
 
+env:
+        - ROS_LOG_DIR=/home/travis/.ros/log
+
 install:
         - bash -xve ./test/travis_ros_install.bash
         - source ~/catkin_ws/devel/setup.bash
@@ -8,7 +11,8 @@ before_script:
         - bash -xve ./test/travis_package_make.bash
         - source ~/catkin_ws/devel/setup.bash
         - bash -xve ./test/travis_prepare_dummy_files.bash
-env:
-        - ROS_LOG_DIR=/home/travis/.ros/log
 script:
+        - cd /home/travis/.ros/
+        - mkdir log
+        - cd ~/catkin_ws/src/pimouse_ros/
         - rostest pimouse_ros test.launch
