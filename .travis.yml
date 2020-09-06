@@ -21,6 +21,7 @@ script:
         - cd ~/catkin_ws/src/pimouse_ros/
         - source ~/catkin_ws/devel/setup.bash
         - cd ~/catkin_ws/
-        - catkin_make run_tests
-        - cd ~/src/pimouse_ros/
-        - rostest pimouse_ros test.launch
+          #- catkin_make run_tests
+        - catkin_make run_tests pimouse_ros
+          #- cd ~/src/pimouse_ros/
+          #- rostest pimouse_ros test.launch
