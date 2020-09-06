@@ -24,4 +24,5 @@ script:
         #- catkin_make run_tests
         #- catkin_make run_tests pimouse_ros
         #- cd ~/src/pimouse_ros/
-        - rostest pimouse_ros test.launch
+        #- rostest pimouse_ros test.launch
+        - rostest pimouse_ros test_launch.test
