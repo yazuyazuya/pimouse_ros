@@ -11,7 +11,11 @@ before_script:
         - bash -xve ./test/travis_package_make.bash
         - source ~/catkin_ws/devel/setup.bash
         - bash -xve ./test/travis_prepare_dummy_files.bash
-        - sudo chmod 0555 ./node_modules/.bin/travis
+        - cd
+        - cd ./node_modules/
+        - cd .bin/
+        - cd travis/
+          #- sudo chmod 0555 ./node_modules/.bin/travis
 script:
         - cd /home/travis/.ros/
         - sudo mkdir test_results
