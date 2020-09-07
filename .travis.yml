@@ -4,7 +4,7 @@ dist: bionic
 env:
         - ROS_HOME=/home/travis/.ros/
           ROS_LOG_DIR=/home/travis/.ros/log/
-          #ROS_TEST_RESULTS_DIR=/home/travis/.ros/test_results/pimouse_ros/
+          ROS_TEST_RESULTS_DIR=/home/travis/.ros/test_results/pimouse_ros/
 
 install:
         - bash -xve ./test/travis_ros_install.bash
@@ -23,9 +23,9 @@ script:
         - sudo chmod 666 rostest-launch_test.xml
         - cd ~/catkin_ws/src/pimouse_ros/
         - source ~/catkin_ws/devel/setup.bash
-        #- cd ~/catkin_ws/
+        - cd ~/catkin_ws/
         #- catkin_make run_tests
-        #- catkin_make run_tests pimouse_ros
-        #- cd ~/src/pimouse_ros/
+        - catkin_make run_tests pimouse_ros
+        - cd ~/src/pimouse_ros/
         - rostest pimouse_ros test.launch
         #- rostest pimouse_ros test_launch.test
