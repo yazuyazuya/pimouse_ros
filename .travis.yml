@@ -5,7 +5,7 @@ env:
         #- ROS_HOME=/home/travis/.ros/
         #- ROS_LOG_DIR=/home/travis/.ros/log/
         - ROS_LOG_DIR=/home/travis/.ros/
-          ROS_TEST_RESULTS_DIR=/home/travis/.ros/test_results/
+        #  ROS_TEST_RESULTS_DIR=/home/travis/.ros/test_results/
 
 install:
         - bash -xve ./test/travis_ros_install.bash
@@ -15,18 +15,18 @@ before_script:
         - source ~/catkin_ws/devel/setup.bash
         - bash -xve ./test/travis_prepare_dummy_files.bash
 script:
-        - cd /home/travis/.ros/
-        - sudo mkdir test_results
-        - cd test_results
-        - sudo mkdir pimouse_ros
-        - cd pimouse_ros
-        - sudo touch rostest-launch_test.xml
-        - sudo chmod 666 rostest-launch_test.xml
-        - cd ~/catkin_ws/src/pimouse_ros/
-        - source ~/catkin_ws/devel/setup.bash
-        - cd ~/catkin_ws/
+        #- cd /home/travis/.ros/
+        #- sudo mkdir test_results
+        #- cd test_results
+        #- sudo mkdir pimouse_ros
+        #- cd pimouse_ros
+        #- sudo touch rostest-launch_test.xml
+        #- sudo chmod 666 rostest-launch_test.xml
+        #- cd ~/catkin_ws/src/pimouse_ros/
+        #- source ~/catkin_ws/devel/setup.bash
+        #- cd ~/catkin_ws/
         #- catkin_make run_tests
-        - catkin_make run_tests pimouse_ros
-        - cd ~/catkin_ws/src/pimouse_ros/
+        #- catkin_make run_tests pimouse_ros
+        #- cd ~/catkin_ws/src/pimouse_ros/
         - rostest pimouse_ros test.launch
         #- rostest pimouse_ros test_launch.test
