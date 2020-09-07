@@ -3,7 +3,7 @@ dist: bionic
 
 env:
         - ROS_HOME=/home/travis/.ros/
-        - ROS_LOG_DIR=/home/travis/.ros/log/
+          ROS_LOG_DIR=/home/travis/.ros/log/
           #ROS_TEST_RESULTS_DIR=/home/travis/.ros/test_results/pimouse_ros/
 
 install:
