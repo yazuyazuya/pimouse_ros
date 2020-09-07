@@ -8,9 +8,9 @@ env:
         #  ROS_TEST_RESULTS_DIR=/home/travis/.ros/test_results/
 
 install:
+        - bash -xve ./test/travis_ros_install.bash
         - cd /home/travis/.ros/
         - sudo chmod -R /home/travis/.ros/*
-        - bash -xve ./test/travis_ros_install.bash
         - source ~/catkin_ws/devel/setup.bash
 before_script:
         - bash -xve ./test/travis_package_make.bash
