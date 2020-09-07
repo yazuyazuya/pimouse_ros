@@ -11,11 +11,13 @@ install:
         - bash -xve ./test/travis_ros_install.bash
         - source ~/catkin_ws/devel/setup.bash
 before_script:
+        - cd /home/travis/.ros/
+        - sudo chmod -R /home/travis/.ros/*
         - bash -xve ./test/travis_package_make.bash
         - source ~/catkin_ws/devel/setup.bash
         - bash -xve ./test/travis_prepare_dummy_files.bash
 script:
-        - cd /home/travis/.ros/
+        #- cd /home/travis/.ros/
         #- sudo mkdir test_results
         #- cd test_results
         #- sudo mkdir pimouse_ros
@@ -27,7 +29,7 @@ script:
         #- cd ~/catkin_ws/
         #- catkin_make run_tests
         #- catkin_make run_tests pimouse_ros
-        - sudo chmod -R /home/travis/.ros/*
+        #- sudo chmod -R /home/travis/.ros/*
         #- sudo chmod 777 /home/travis/.ros/*
         - cd ~/catkin_ws/src/pimouse_ros/
         - rostest pimouse_ros test.launch
