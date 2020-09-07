@@ -31,6 +31,7 @@ script:
         #- catkin_make run_tests pimouse_ros
         #- sudo chmod -R /home/travis/.ros/*
         #- sudo chmod 777 /home/travis/.ros/*
+        #- sudo chmod -R 777 /home/travis/.ros/*
         - cd ~/catkin_ws/src/pimouse_ros/
         - rostest pimouse_ros test.launch
         #- rostest pimouse_ros test_launch.test
