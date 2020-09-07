@@ -9,8 +9,8 @@ env:
 
 install:
         - bash -xve ./test/travis_ros_install.bash
-        - cd /home/travis/.ros/
-        - sudo chmod -R 777 /home/travis/.ros/*
+        #- cd /home/travis/.ros/
+        #- sudo chmod -R 777 /home/travis/.ros/*
         - source ~/catkin_ws/devel/setup.bash
 before_script:
         - bash -xve ./test/travis_package_make.bash
@@ -31,7 +31,7 @@ script:
         #- catkin_make run_tests pimouse_ros
         #- sudo chmod -R /home/travis/.ros/*
         #- sudo chmod 777 /home/travis/.ros/*
-        #- sudo chmod -R 777 /home/travis/.ros/*
+        - sudo chmod -R 777 /home/travis/.ros/*
         - cd ~/catkin_ws/src/pimouse_ros/
         - rostest pimouse_ros test.launch
         #- rostest pimouse_ros test_launch.test
