@@ -1,8 +1,11 @@
 sudo: required
 dist: bionic
+
 env:
+        - ROS_HOME=/home/travis/.ros/
         - ROS_LOG_DIR=/home/travis/.ros/log/
           #ROS_TEST_RESULTS_DIR=/home/travis/.ros/test_results/pimouse_ros/
+
 install:
         - bash -xve ./test/travis_ros_install.bash
         - source ~/catkin_ws/devel/setup.bash
@@ -16,8 +19,8 @@ script:
         - cd test_results
         - sudo mkdir pimouse_ros
         - cd pimouse_ros
-        - sudo touch rostest-launch_test_launch.xml
-        - sudo chmod 666 rostest-launch_test_launch.xml
+        - sudo touch rostest-launch_test.xml
+        - sudo chmod 666 rostest-launch_test.xml
         - cd ~/catkin_ws/src/pimouse_ros/
         - source ~/catkin_ws/devel/setup.bash
         #- cd ~/catkin_ws/
