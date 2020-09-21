@@ -30,5 +30,7 @@ script:
         #- sudo chmod -R /home/travis/.ros/*
         #- sudo chmod 777 /home/travis/.ros/*
         - sudo chmod -R 777 /home/travis/.ros/*
+        - ls -l /home/travis/.ros/*
         - cd ~/catkin_ws/src/pimouse_ros/
         - rostest pimouse_ros test.launch
+        - ls -l /home/travis/.ros/*
