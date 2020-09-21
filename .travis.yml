@@ -33,4 +33,5 @@ script:
         - ls -l /home/travis/.ros/*
         - cd ~/catkin_ws/src/pimouse_ros/
         - rostest pimouse_ros test.launch
+        - ls -a /home/travis/.ros/*
         - ls -l /home/travis/.ros/*
